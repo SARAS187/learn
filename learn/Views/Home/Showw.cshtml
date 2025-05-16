@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "y";
+}
+
+@{
+    var emp = (learn.Models.Employee)ViewData["EMP"];
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Use thispolicy.</p>
+
+<h1> hello world </h1>
+<h4> viewdata of x  :  @ViewData["x"] </h4>
+<h4> viewdata of y  :  @ViewData["x"] </h4>
+<ul>
+    @{
+    foreach (string i in (string[])ViewData["array"])
+    {
+        <li>@i</li>
+    }
+    }
+</ul>
+<h2>Employee Details</h2>
+<ul>
+    <li>ID: @emp.EmpID</li>
+    <li>Name: @emp.EmpName</li>
+    <li>Designation: @emp.EmpDesignation</li>
+</ul>
+

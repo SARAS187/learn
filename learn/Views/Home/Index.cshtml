@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="">
+    <h1 class="display-4">Wel;come</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <!--inline experesion-->
+    <p>Current date and time: @DateTime.Now</p>
+    <p>Current date and time: @DateTime.Now.Year</p>
+    @{
+        string a = "sarr";
+        var b = "12xyz";
+        string c = DateTime.Now.ToString(); 
+        var d = DateTime.Now.ToString(); 
+    }
+    <span> a value is @a</span>
+    <p> b value is @b</p> 
+    <p> c value is @c</p>
+    <p> d value is @d</p>
+    <h5>@ViewBag.name</h5>
+    <h5>@ViewBag.x</h5>
+    <h5>@ViewBag.num</h5>   
+    
+    <ul>
+        @{
+            foreach (string i in ViewBag.array)
+            {
+                <li>@i</li>
+            }
+        }
+    </ul>
+    @{
+        var emp = (learn.Models.Employee)ViewBag.e;
+    }
+
+    <ul>
+        <li>
+            @emp.EmpID;
+            @emp.EmpName;
+           @emp.EmpDesignation;
+        </li>
+    </ul>
+</div>
